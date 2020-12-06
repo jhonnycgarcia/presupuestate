@@ -1,15 +1,41 @@
-function handlerChange(event) {
-    console.log('inside handleChange event', event);
+function handlerChange(target) {
+    const item = document.getElementById(target);
+    const { value, min, max } = item;
+
+    if (value === min) handlerInputButtons(`subtract-${target}`, true);
+
+    if (value === max) handlerInputButtons(`addition-${target}`, true);
+
+    if (value > min) handlerInputButtons(`subtract-${target}`);
+
+    if (value < max) handlerInputButtons(`addition-${target}`);
+}
+
+function handlerChangesSwitches(target) {
+    const { checked, id } = target;
+    const child = document.getElementById(id).getAttribute('data-target');
+    if (checked) {
+        document.getElementById(child).classList.remove('d-none');
+    } else {
+        document.getElementById(child).classList.add('d-none');
+    }
+}
+
+function handlerInputButtons(target, value = false) {
+    const { disabled } = document.getElementById(target);
+    if (disabled !== value) document.getElementById(target).disabled = value;
 }
 
 function handlerSubtract(target) {
     const oldValue = document.getElementById(target).value;
-    if (oldValue > 0) document.getElementById(target).value = Number(oldValue) - 1;
+    document.getElementById(target).stepDown();
+    handlerChange(target);
 }
 
-function handlerAddition(target, limit = 5) {
+function handlerAddition(target) {
     const oldValue = document.getElementById(target).value;
-    if (oldValue < limit) document.getElementById(target).value = Number(oldValue) + 1;
+    document.getElementById(target).stepUp();
+    handlerChange(target);
 }
 
 
@@ -94,7 +120,7 @@ function renderCustomInputNumber(configOpt) {
 
     // Render prepend
     render += `<div class="${inputOpt.inputGroupPrepend}">`;
-    render += `<button class="${inputOpt.prependButton.class}" type="button" onclick="document.getElementById('${inputName}').stepDown()">${inputOpt.prependButton.text}</button>`;
+    render += `<button class="${inputOpt.prependButton.class}" type="button" id="subtract-${inputName}" onclick="handlerSubtract('${inputId}')" disabled>${inputOpt.prependButton.text}</button>`;
     render += `</div>`;
 
     // Render input
@@ -102,7 +128,7 @@ function renderCustomInputNumber(configOpt) {
 
     // Render append
     render += `<div class="${inputOpt.inputGroupAppend}">`;
-    render += `<button class="${inputOpt.appendButton.class}" type="button" onclick="document.getElementById('${inputId}').stepUp()">${inputOpt.appendButton.text}</button>`;
+    render += `<button class="${inputOpt.appendButton.class}" type="button" id="addition-${inputName}" onclick="handlerAddition('${inputId}')">${inputOpt.appendButton.text}</button>`;
     render += `</div>`;
 
     render += `</div>`;
@@ -113,17 +139,35 @@ function renderCustomInputNumber(configOpt) {
     return render;
 }
 
-const testOpt = {
-    section: 'dormitorios',
-    inputOpt: {
-        id: 'Test',
-        name: 'Test',
-        step: 2,
-        displayInputHelper: true,
-    },
-    labelOpt: { label: 'Test Input' }
+function renderSections(containers) {
+    for (const key in containers) {
+        const { section, items } = containers[key];
+
+        for (const idx in items) {
+            const { inputOpt, type } = items[idx];
+
+            if (type === 1) {
+                const render = renderCustomInputNumber({...items[idx], section });
+                document.getElementById(`container-${section}-${inputOpt.id}`).innerHTML = render;
+            } else {
+                console.log(inputOpt.id);
+            }
+        }
+    }
 }
 
-const a = renderCustomInputNumber(testOpt);
-console.log(a);
-document.getElementById('rellenar').innerHTML = a;
+
+const sections = [
+    { section: 'dormitorioPrincipal', items: dormitorioPrincipalItems, },
+    { section: 'dormitorios', items: dormitoriosItems, },
+    { section: 'comedor', items: comedorItems, },
+    { section: 'cocina', items: cocinaItems, },
+    { section: 'oficina', items: oficinaItems, },
+    { section: 'recibidor', items: recibidorItems, },
+    { section: 'trastero', items: trasteroItems, },
+    { section: 'terraza', items: terrazaItems, },
+    { section: 'bano', items: banoItems, },
+    { section: 'cajas', items: cajasItems, },
+    { section: 'lamparas', items: lamparasItems, },
+];
+renderSections(sections);

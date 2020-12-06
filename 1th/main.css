@@ -1,0 +1,39 @@
+main {
+    margin: 20px;
+}
+
+section {
+    margin: 20px auto;
+}
+
+.required-red {
+    color: red;
+}
+
+textarea {
+    resize: none;
+}
+
+.card>.card-header h2>button {
+    text-decoration: none;
+}
+
+.card>.card-header h2>button.btn {
+    outline: none;
+    box-shadow: none;
+}
+
+.form-control[readonly] {
+    background: none;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}

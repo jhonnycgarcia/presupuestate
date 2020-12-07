@@ -1,14 +1,61 @@
+/**
+ * Orden de importaciones
+ * 1- Definiciones
+ * 2- renderComponents
+ * 3- main
+ */
+var data = {}; // Data Global
+
+function handlerInputsAmount(target) {
+    const item = document.getElementById(target);
+    const price = document.getElementById(target).getAttribute('data-price');
+    const dataName = document.getElementById(target).getAttribute('data-name');
+    const [section, name] = dataName.split('-')
+
+    if (data.hasOwnProperty(section)) { // ya existe la propiedad
+        data[section] = Object.assign({}, {...data[section] }, {
+            [name]: { value: item.value, price, amount: (item.value * price) }
+        });
+    } else { // No existe la propiedad
+        data = Object.assign({}, {...data }, {
+            [section]: {
+                [name]: { value: item.value, price, amount: (item.value * price) }
+            }
+        });
+    }
+    calcAmount(); // Realizar calculo
+}
+
+function calcAmount() {
+    let totalAmoun = 30;
+    let sectionData = Object.assign({}, {...data });
+    for (const section in sectionData) { // Recorrer secciones
+        let sectionItems = sectionData[section];
+
+        for (const item in sectionItems) { // Recorrer items de la seccion
+            const { amount } = sectionItems[item];
+            totalAmoun = totalAmoun + amount;
+        }
+    }
+
+    document.getElementById('amount').innerText = totalAmoun; // Actualizar valor total
+}
+
 function handlerChange(target) {
     const item = document.getElementById(target);
-    const { value, min, max } = item;
+    const dataName = document.getElementById(target).getAttribute('data-name');
 
-    if (value === min) handlerInputButtons(`subtract-${target}`, true);
+    if (item.type === 'number') { // Handler number type
+        const { value, min, max } = item;
+        if (value === min) handlerInputNumberButtons(`subtract-${target}`, true);
+        if (value === max) handlerInputNumberButtons(`addition-${target}`, true);
+        if (value > min) handlerInputNumberButtons(`subtract-${target}`);
+        if (value < max) handlerInputNumberButtons(`addition-${target}`);
+    } else {
+        console.log('another type of input');
+    }
 
-    if (value === max) handlerInputButtons(`addition-${target}`, true);
-
-    if (value > min) handlerInputButtons(`subtract-${target}`);
-
-    if (value < max) handlerInputButtons(`addition-${target}`);
+    handlerInputsAmount(target);
 }
 
 function handlerChangesSwitches(target) {
@@ -21,17 +68,30 @@ function handlerChangesSwitches(target) {
     }
 }
 
-function handlerInputButtons(target, value = false) {
+/**
+ * Funcion para habilitar o deshabilitar botones en los campos input number
+ * @param {String} target 
+ * @param {Boolean} value 
+ */
+function handlerInputNumberButtons(target, value = false) {
     const { disabled } = document.getElementById(target);
     if (disabled !== value) document.getElementById(target).disabled = value;
 }
 
+/**
+ * 
+ * @param {String} target - ID of target
+ */
 function handlerSubtract(target) {
     const oldValue = document.getElementById(target).value;
     document.getElementById(target).stepDown();
     handlerChange(target);
 }
 
+/**
+ *
+ * @param {String} target - ID of target
+ */
 function handlerAddition(target) {
     const oldValue = document.getElementById(target).value;
     document.getElementById(target).stepUp();
@@ -39,106 +99,18 @@ function handlerAddition(target) {
 }
 
 
-/**
- * @typedef LabelOptions
- * @type {object}
- * @property {string} label - Label
- * @property {string=} class - Optional class
- * 
- * @typedef InputHelper
- * @type {object}
- * @property {string} text - Text
- * @property {string=} class - Optional class
- * 
- * @typedef InputButtonOpt
- * @type {object}
- * @property {string=} class - Optional class
- * @property {string} text - Text
- * 
- * @typedef InputOptions
- * @type {object}
- * @property {String} id    - ID
- * @property {String} name  - Name
- * @property {String} inputGroupClass   - Input Group concat Class
- * @property {Boolean} displayInputHelper   - Display input helper
- * @property {String} inputGroupPrepend - Input Group prepend class
- * @property {String} inputGroupAppend - Input Group prepend class
- * @property {Number} value - Input Group prepend class
- * @property {Number} min - Min value
- * @property {Number} max - Max value
- * @property {Number} step - Step jump
- * @property {String} class - Input Group prepend class
- * 
- * @property {InputButtonOpt} prependButton -   Text button
- * @property {InputButtonOpt} appendButton -   Text button
- */
 
-const defaultLabelOptions = { label: 'Default Label', class: '' };
-const defaultInputHelper = { text: 'Descripcion helper or validation message.', class: 'form-text text-muted' };
-const defaultInputOptions = {
-    id: 'defaultId',
-    name: 'defaultName',
-    class: 'form-control',
-    value: 0,
-    min: 0,
-    max: 10,
-    step: 1,
-    inputGroupClass: 'input-group',
-    inputGroupPrepend: 'input-group-prepend',
-    prependButton: { class: 'btn btn-primary', text: '<strong>-</strong>' },
-    inputGroupAppend: 'input-group-append',
-    appendButton: { class: 'btn btn-primary', text: '<strong>+</strong>' },
-    displayInputHelper: true
-};
+
+
+
+
 
 
 /**
- * 
- * @param {Object} configOpt 
- * @param {String} configOpt.section
- * 
- * @param {LabelOptions} configOpt.labelOpt
- * @param {InputOptions} configOpt.inputOpt
- * @param {InputHelper} configOpt.inputHelper
- * 
- * 
+ * @param {Object} containers 
+ * @param {String} containers.section
+ * @param {Array[]} containers.items
  */
-function renderCustomInputNumber(configOpt) {
-    const { section = 'default' } = configOpt;
-
-    const labelOpt = Object.assign({}, defaultLabelOptions, configOpt.labelOpt); // Assign values
-    const inputOpt = Object.assign({}, defaultInputOptions, configOpt.inputOpt); // Assign values
-    const inputHelper = Object.assign({}, defaultInputHelper, configOpt.inputHelper); // Assign values
-
-    const inputName = section + inputOpt.name;
-    const inputId = section + inputOpt.id;
-    let render = ``;
-
-    if (labelOpt) render += `<label for="${inputName}" ${(labelOpt.class) ? 'class="' + labelOpt.class+'"':''}>${labelOpt.label}</label>`;
-
-    render += `<div class="${inputOpt.inputGroupClass}">`;
-
-    // Render prepend
-    render += `<div class="${inputOpt.inputGroupPrepend}">`;
-    render += `<button class="${inputOpt.prependButton.class}" type="button" id="subtract-${inputName}" onclick="handlerSubtract('${inputId}')" disabled>${inputOpt.prependButton.text}</button>`;
-    render += `</div>`;
-
-    // Render input
-    render += `<input type="number" class="${inputOpt.class}" id="${inputId}" name="${inputName}" min="${inputOpt.min}" max="${inputOpt.max}" step="${inputOpt.step}" value="${inputOpt.value}" readonly>`;
-
-    // Render append
-    render += `<div class="${inputOpt.inputGroupAppend}">`;
-    render += `<button class="${inputOpt.appendButton.class}" type="button" id="addition-${inputName}" onclick="handlerAddition('${inputId}')">${inputOpt.appendButton.text}</button>`;
-    render += `</div>`;
-
-    render += `</div>`;
-
-    // Render Helper text
-    if (inputOpt.displayInputHelper && inputHelper) render += `<small id="${inputName}Helper" class="form-text text-muted">${(inputHelper.text) ? inputHelper.text:''}</small>`;
-
-    return render;
-}
-
 function renderSections(containers) {
     for (const key in containers) {
         const { section, items } = containers[key];
@@ -146,8 +118,11 @@ function renderSections(containers) {
         for (const idx in items) {
             const { inputOpt, type } = items[idx];
 
-            if (type === 1) {
+            if (type === 1) { // Input type Number
                 const render = renderCustomInputNumber({...items[idx], section });
+                document.getElementById(`container-${section}-${inputOpt.id}`).innerHTML = render;
+            } else if (type === 3) { // Input type Text
+                const render = renderCustomInputText({...items[idx], section });
                 document.getElementById(`container-${section}-${inputOpt.id}`).innerHTML = render;
             } else {
                 console.log(inputOpt.id);

@@ -37,3 +37,12 @@ input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
 }
+
+.total {
+    position: fixed;
+    bottom: 2%;
+    right: 5%;
+    background: #ffa500;
+    font-size: 15px;
+    z-index: 3;
+}

@@ -23,6 +23,7 @@ function handlerInputsAmount(target) {
             }
         });
     }
+
     calcAmount(); // Realizar calculo
 }
 
@@ -41,6 +42,10 @@ function calcAmount() {
     document.getElementById('amount').innerText = totalAmoun; // Actualizar valor total
 }
 
+/**
+ * 
+ * @param {String} id  - Target ID
+ */
 function handlerChange(target) {
     const item = document.getElementById(target);
     const dataName = document.getElementById(target).getAttribute('data-name');
@@ -60,12 +65,26 @@ function handlerChange(target) {
 
 function handlerChangesSwitches(target) {
     const { checked, id } = target;
-    const child = document.getElementById(id).getAttribute('data-target');
-    if (checked) {
-        document.getElementById(child).classList.remove('d-none');
-    } else {
-        document.getElementById(child).classList.add('d-none');
+    if (document.getElementById(id).hasAttribute('data-target')) { // Validar si tiene el atributo
+        const child = document.getElementById(id).getAttribute('data-target');
+        if (checked) {
+            document.getElementById(id).value = 1;
+            try {
+                document.getElementById(child).classList.remove('d-none');
+            } catch (error) {
+                console.log('cannot target child', chil);
+            }
+        } else {
+            document.getElementById(id).value = 0;
+            try {
+                document.getElementById(child).classList.add('d-none');
+            } catch (error) {
+                console.log('cannot target child', chil);
+            }
+        }
     }
+
+    handlerChange(target.id); // Set to save into Data
 }
 
 /**
@@ -79,21 +98,19 @@ function handlerInputNumberButtons(target, value = false) {
 }
 
 /**
- * 
+ * Disminuir input Number
  * @param {String} target - ID of target
  */
 function handlerSubtract(target) {
-    const oldValue = document.getElementById(target).value;
     document.getElementById(target).stepDown();
     handlerChange(target);
 }
 
 /**
- *
+ * Aumentar input Number
  * @param {String} target - ID of target
  */
 function handlerAddition(target) {
-    const oldValue = document.getElementById(target).value;
     document.getElementById(target).stepUp();
     handlerChange(target);
 }
@@ -120,10 +137,25 @@ function renderSections(containers) {
 
             if (type === 1) { // Input type Number
                 const render = renderCustomInputNumber({...items[idx], section });
-                document.getElementById(`container-${section}-${inputOpt.id}`).innerHTML = render;
+                try {
+                    document.getElementById(`container-${section}-${inputOpt.id}`).innerHTML = render;
+                } catch (error) {
+                    console.log('cannot inner HTML to', inputOpt.id);
+                }
+            } else if (type === 2) { // Input type Switche
+                try {
+                    const render = renderCustomInputSwitche({...items[idx], section })
+                    document.getElementById(`container-${section}-${inputOpt.id}`).innerHTML = render;
+                } catch (error) {
+                    console.log('cannot inner HTML to', inputOpt.id);
+                }
             } else if (type === 3) { // Input type Text
-                const render = renderCustomInputText({...items[idx], section });
-                document.getElementById(`container-${section}-${inputOpt.id}`).innerHTML = render;
+                try {
+                    const render = renderCustomInputText({...items[idx], section });
+                    document.getElementById(`container-${section}-${inputOpt.id}`).innerHTML = render;
+                } catch (error) {
+                    console.log('cannot inner HTML to', inputOpt.id);
+                }
             } else {
                 console.log(inputOpt.id);
             }

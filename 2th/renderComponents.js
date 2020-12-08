@@ -41,6 +41,14 @@
  * @property {String} showPlaceholder  - 
  * @property {String} displayInputHelper  - 
  * 
+ * @typedef InputSwitcheOptions
+ * @type {object}
+ * @property {String} id    - ID
+ * @property {String} name  - Name
+ * @property {String} containerClass  - Container class
+ * @property {String} class  - Input Class
+ * @property {Boolean} hasTarget  - Has target element
+ * 
  */
 
 const defaultLabelOptions = { label: 'Default Label', class: '' };
@@ -148,5 +156,43 @@ function renderCustomInputText(configOpt) {
 
     if (inputOpt.displayInputHelper && inputHelper) render += `<small id="${inputName}Helper" class="form-text text-muted">${(inputHelper.text) ? inputHelper.text : ''}</small>`;
 
+    return render;
+}
+
+const defaultInputSwitcheOptions = {
+    id: 'defaultSwitcheId',
+    name: 'defaultSwitcheName',
+    containerClass: 'custom-control custom-switch',
+    class: 'custom-control-input',
+    hasTarget: true,
+}
+
+
+/**
+ * Funcion para renderizar los campos Input tipo TEXT
+ * @param {Object} configOpt
+ * @param {String} configOpt.section
+ *
+ * @param {LabelOptions} configOpt.labelOpt
+ * @param {InputSwitcheOptions} configOpt.inputOpt
+ */
+function renderCustomInputSwitche(configOpt) {
+    const { section = 'default' } = configOpt;
+
+    const labelOpt = Object.assign({}, defaultLabelOptions, configOpt.labelOpt); // Assign values
+    const inputOpt = Object.assign({}, defaultInputSwitcheOptions, configOpt.inputOpt); // Assign values
+
+    const inputName = section + inputOpt.name;
+    const inputId = section + inputOpt.id;
+    const target = (inputOpt.hasTarget) ? `data-target="container-${section}-${inputOpt.name}Medidas"` : '';
+    let render = ``;
+
+    render += `<div class="${inputOpt.containerClass}">`;
+
+    render += `<input type="checkbox" class="${inputOpt.class}" name="${inputName}" id="${inputId}" value="1" data-name="${section}-${inputOpt.name}" data-price="${inputOpt.price}" ${target} onchange="handlerChangesSwitches(this)">`;
+
+    render += `<label for="${inputName}" class="custom-control-label ${labelOpt.class}">${labelOpt.label}</label>`;
+
+    render += `</div>`;
     return render;
 }

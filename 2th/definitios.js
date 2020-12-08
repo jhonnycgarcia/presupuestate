@@ -67,6 +67,36 @@ const dormitorioPrincipalItems = [{
         labelOpt: { label: 'Estantería a la pared' }
     },
     {
+        type: 3,
+        inputOpt: { id: 'EstanteriaSueloMedidas', name: 'EstanteriaSueloMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Estantería al suelo medidas' },
+    },
+    {
+        type: 1,
+        inputOpt: { id: 'EstanteriaSuelo', name: 'EstanteriaSuelo', step: 1, price: 10, max: 10, displayInputHelper: false, },
+        labelOpt: { label: 'Número de estanterías al suelo' }
+    },
+    {
+        type: 2,
+        inputOpt: { id: 'ArmarioPuertasAbrir', name: 'ArmarioPuertasAbrir', price: 20 },
+        labelOpt: { label: 'Armario puertas de abrir' },
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'ArmarioPuertasAbrirMedidas', name: 'ArmarioPuertasAbrirMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Armario puertas de abrir medidas' },
+    },
+    {
+        type: 2,
+        inputOpt: { id: 'ArmarioPuertasCorredora', name: 'ArmarioPuertasCorredora', price: 30 },
+        labelOpt: { label: 'Armario puertas correderas' },
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'ArmarioPuertasCorredoraMedidas', name: 'ArmarioPuertasCorredoraMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Armario puertas correderas medidas' },
+    },
+    {
         type: 1,
         inputOpt: { id: 'Zapatero', name: 'Zapatero', step: 1, price: 5, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Zapatero' }
@@ -182,9 +212,39 @@ const dormitoriosItems = [{
         labelOpt: { label: 'Comoda espejo' }
     },
     {
+        type: 2,
+        inputOpt: { id: 'ArmarioPuertasAbrir', name: 'ArmarioPuertasAbrir', price: 10 },
+        labelOpt: { label: 'Armario puertas de abrir' },
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'ArmarioPuertasAbrirMedidas', name: 'ArmarioPuertasAbrirMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Armario puertas de abrir medidas' },
+    },
+    {
+        type: 2,
+        inputOpt: { id: 'ArmarioPuertasCorredora', name: 'ArmarioPuertasCorredora', price: 15 },
+        labelOpt: { label: 'Armario puertas correderas' },
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'ArmarioPuertasCorredoraMedidas', name: 'ArmarioPuertasCorredoraMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Armario puertas correderas medidas' },
+    },
+    {
         type: 1,
         inputOpt: { id: 'MuebleAuxiliar', name: 'MuebleAuxiliar', step: 1, price: 15, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Mueble auxiliar' }
+    },
+    {
+        type: 2,
+        inputOpt: { id: 'ArmarioEsquinero', name: 'ArmarioEsquinero', price: 15 },
+        labelOpt: { label: 'Armario esquinero' },
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'ArmarioEsquineroMedidas', name: 'ArmarioEsquineroMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Armario esquinero medidas' },
     },
     {
         type: 1,
@@ -195,6 +255,11 @@ const dormitoriosItems = [{
         type: 1,
         inputOpt: { id: 'EstanteriaSuelo', name: 'EstanteriaSuelo', step: 1, price: 15, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Estanteria al suelo' }
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'EstanteriaSueloMedidas', name: 'EstanteriaSueloMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Estanteria al suelo medidas' },
     },
     {
         type: 1,
@@ -220,6 +285,46 @@ const comedorItems = [{
         type: 1,
         inputOpt: { id: 'Sillas', name: 'Sillas', step: 1, price: 0, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Sillas' }
+    },
+    {
+        type: 2,
+        inputOpt: { id: 'ModuloComedorPared', name: 'ModuloComedorPared', price: 15 },
+        labelOpt: { label: 'Modulo comedor a la pared' },
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'ModuloComedorParedMedidas', name: 'ModuloComedorParedMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Modulo comedor a la pared medidas' },
+    },
+    {
+        type: 2,
+        inputOpt: { id: 'ModuloComedorSuelo', name: 'ModuloComedorSuelo', price: 15 },
+        labelOpt: { label: 'Modulo comedor al suelo' },
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'ModuloComedorSueloMedidas', name: 'ModuloComedorSueloMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Modulo comedor al suelo medidas' },
+    },
+    {
+        type: 2,
+        inputOpt: { id: 'Vitrina', name: 'Vitrina', price: 15 },
+        labelOpt: { label: 'Vitrina' },
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'VitrinaMedidas', name: 'VitrinaMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Vitrina medidas' },
+    },
+    {
+        type: 2,
+        inputOpt: { id: 'MuebleTvBajo', name: 'MuebleTvBajo', price: 10 },
+        labelOpt: { label: 'Mueble tv bajo' },
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'MuebleTvBajoMedidas', name: 'MuebleTvBajoMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Mueble tv bajo medidas' },
     },
     {
         type: 1,
@@ -252,9 +357,29 @@ const comedorItems = [{
         labelOpt: { label: 'Sillas de comedor' }
     },
     {
+        type: 2,
+        inputOpt: { id: 'Sofas3Plazas', name: 'Sofas3Plazas', price: 20 },
+        labelOpt: { label: 'Sofás 3 plazas' },
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'Sofas3PlazasMedidas', name: 'Sofas3PlazasMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Sofás 3 plazas medidas' },
+    },
+    {
         type: 1,
         inputOpt: { id: 'Sofas2Plazas', name: 'Sofas2Plazas', step: 1, price: 5, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Sofás 2 plazas' }
+    },
+    {
+        type: 2,
+        inputOpt: { id: 'SofaChaiseLonge', name: 'SofaChaiseLonge', price: 20 },
+        labelOpt: { label: 'Sofá Chaise-longe' },
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'SofaChaiseLongeMedidas', name: 'SofaChaiseLongeMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Sofá Chaise-longe medidas' },
     },
     {
         type: 1,
@@ -280,6 +405,21 @@ const comedorItems = [{
         type: 1,
         inputOpt: { id: 'EstanteriaSuelo', name: 'EstanteriaSuelo', step: 1, price: 15, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Estantería al suelo' }
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'EstanteriaSueloMedidas', name: 'EstanteriaSueloMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Estantería al suelo medidas' },
+    },
+    {
+        type: 2,
+        inputOpt: { id: 'MuebleAuxiliar', name: 'MuebleAuxiliar', price: 10 },
+        labelOpt: { label: 'Mueble auxiliar' },
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'MuebleAuxiliarMedidas', name: 'MuebleAuxiliarMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Mueble auxiliar medidas' },
     },
     {
         type: 1,
@@ -407,9 +547,19 @@ const oficinaItems = [{
         labelOpt: { label: 'Librería modular' }
     },
     {
+        type: 3,
+        inputOpt: { id: 'LibreriaModularMedidas', name: 'LibreriaModularMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Librería modular medidas' },
+    },
+    {
         type: 1,
         inputOpt: { id: 'EstanteriaSuelo', name: 'EstanteriaSuelo', step: 1, price: 15, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Estantería al suelo' }
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'EstanteriaSueloMedidas', name: 'EstanteriaSueloMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Estantería al suelo medidas' },
     },
     {
         type: 1,
@@ -427,6 +577,11 @@ const oficinaItems = [{
         labelOpt: { label: 'Mesa oficina' }
     },
     {
+        type: 3,
+        inputOpt: { id: 'MesaOficinaMedidas', name: 'MesaOficinaMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Mesa oficina medidas' },
+    },
+    {
         type: 1,
         inputOpt: { id: 'MesaCaballetes', name: 'MesaCaballetes', step: 1, price: 20, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Mesa con caballetes' }
@@ -435,6 +590,11 @@ const oficinaItems = [{
         type: 1,
         inputOpt: { id: 'MesaReuniones', name: 'MesaReuniones', step: 1, price: 20, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Mesa de reuniones' }
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'MesaReunionesMedidas', name: 'MesaReunionesMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Mesa reuniones medidas' },
     },
     {
         type: 1,
@@ -487,9 +647,19 @@ const oficinaItems = [{
         labelOpt: { label: 'Armario archivador' }
     },
     {
+        type: 3,
+        inputOpt: { id: 'ArmarioArchivadorMedidas', name: 'ArmarioArchivadorMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Armario archivador medidas' },
+    },
+    {
         type: 1,
         inputOpt: { id: 'ArmarioMetalico', name: 'ArmarioMetalico', step: 1, price: 15, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Armario métalico' }
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'ArmarioMetalicoMedidas', name: 'ArmarioMetalicoMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Armario métalico medidas' },
     },
     {
         type: 1,
@@ -557,6 +727,11 @@ const recibidorItems = [{
         labelOpt: { label: 'Mueble recibidor' }
     },
     {
+        type: 3,
+        inputOpt: { id: 'MuebleRecibidorMedidas', name: 'MuebleRecibidorMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Mueble recibidor medidas' },
+    },
+    {
         type: 1,
         inputOpt: { id: 'Espejo', name: 'Espejo', step: 1, price: 10, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Espejo' }
@@ -587,6 +762,11 @@ const trasteroItems = [{
         labelOpt: { label: 'Estanterías al suelo' }
     },
     {
+        type: 3,
+        inputOpt: { id: 'EstanteriasSueloMedidas', name: 'EstanteriasSueloMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Estanterías al suelo medidas' },
+    },
+    {
         type: 1,
         inputOpt: { id: 'Trastos', name: 'Trastos', step: 1, price: 15, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Trastos' }
@@ -602,9 +782,19 @@ const trasteroItems = [{
         labelOpt: { label: 'Armarios puertas de abrir' }
     },
     {
+        type: 3,
+        inputOpt: { id: 'ArmarioPuestasAbrirMedidas', name: 'ArmarioPuestasAbrirMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Armarios puertas de abrir medidas' },
+    },
+    {
         type: 1,
         inputOpt: { id: 'ArmarioPuestasCorredoras', name: 'ArmarioPuestasCorredoras', step: 1, price: 15, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Armarios puertas corredoras' }
+    },
+    {
+        type: 3,
+        inputOpt: { id: 'ArmarioPuestasCorredorasMedidas', name: 'ArmarioPuestasCorredorasMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Armarios puertas corredoras medidas' },
     },
     {
         type: 1,
@@ -707,6 +897,11 @@ const terrazaItems = [{
         labelOpt: { label: 'Mueble auxiliar' }
     },
     {
+        type: 3,
+        inputOpt: { id: 'MuebleAuxiliarMedidas', name: 'MuebleAuxiliarMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        labelOpt: { label: 'Mueble auxiliar medidas' },
+    },
+    {
         type: 1,
         inputOpt: { id: 'ArmarioPvc', name: 'ArmarioPvc', step: 1, price: 10, max: 5, displayInputHelper: false, },
         labelOpt: { label: 'Armario PVC' }
@@ -748,7 +943,7 @@ const banoItems = [{
     },
     {
         type: 3,
-        inputOpt: { id: 'MueblesBanoPieMedidas', name: 'MueblesBanoPieMedidas', step: 1, price: 0, max: 5, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
+        inputOpt: { id: 'MueblesBanoPieMedidas', name: 'MueblesBanoPieMedidas', step: 1, price: 0, placeholder: 'Medidas apróximadas', displayInputHelper: true, },
         labelOpt: { label: 'Muebles baño de pie medidas' },
     },
 ];

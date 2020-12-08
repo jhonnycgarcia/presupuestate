@@ -292,39 +292,18 @@
                                     <div class="form-group col-12" id="container-dormitorioPrincipal-Baul"></div>
                                     <!-- Estantería a la pared -->
                                     <div class="form-group col-12" id="container-dormitorioPrincipal-EstanteriaPared"></div>
-                                    <div class="form-group col-12">
-                                        <label for="estanteriaSueloMedidas">Estantería al suelo</label>
-                                        <input type="text" class="form-control" name="estanteriaSueloMedidas" id="estanteriaSueloMedidas" aria-describedby="estanteriaSueloMedidasHelper" placeholder="Medidas apróximadas">
-                                        <small id="estanteriaSueloMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                    </div>
+                                    <!-- Estantería a la pared medidas -->
+                                    <div class="form-group col-12" id="container-dormitorioPrincipal-EstanteriaSueloMedidas"></div>
                                     <!-- Número de estanterías al suelo -->
-                                    <div class="form-group col-12"></div>
-                                    <!--  -->
-                                    <div class="form-group col-12" id="container-dormitorioPrincipal-ArmarioPuertasAbrirOption">
-                                        <div class="custom-control custom-switch">
-                                            <input type="checkbox" class="custom-control-input" id="ArmarioPuertasAbrirOption" data-target="container-dormitorioPrincipal-ArmarioPuertasAbrirMedidas" onchange="handlerChangesSwitches(this)">
-                                            <label for="ArmarioPuertasAbrirOption" class="custom-control-label">Armario puertas de abrir</label>
-                                        </div>
-                                    </div>
+                                    <div class="form-group col-12" id="container-dormitorioPrincipal-EstanteriaSuelo"></div>
+                                    <!-- Armario puertas de abrir -->
+                                    <div class="form-group col-12" id="container-dormitorioPrincipal-ArmarioPuertasAbrir"></div>
                                     <!-- Armario puertas de abrir medidas -->
-                                    <div class="form-group col-12 d-none" id="container-dormitorioPrincipal-ArmarioPuertasAbrirMedidas">
-                                        <label for="dormitorioPrincipalArmarioPuertasAbrirMedidas">Armario puertas de abrir medidas</label>
-                                        <input type="text" class="form-control" name="dormitorioPrincipalArmarioPuertasAbrirMedidas" id="dormitorioPrincipalArmarioPuertasAbrirMedidas" aria-describedby="dormitorioPrincipalArmarioPuertasAbrirMedidasHelper" placeholder="Medidas apróximadas">
-                                        <small id="dormitorioPrincipalArmarioPuertasAbrirMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                    </div>
+                                    <div class="form-group col-12 d-none" id="container-dormitorioPrincipal-ArmarioPuertasAbrirMedidas"></div>
                                     <!-- Armario puertas correderas -->
-                                    <div class="form-group col-12" id="container-dormitorioPrincipal-ArmarioPuertasCorredoraOption">
-                                        <div class="custom-control custom-switch">
-                                            <input type="checkbox" class="custom-control-input" id="ArmarioPuertasCorredoraOption" data-target="container-dormitorioPrincipal-ArmarioPuertasCorredoraMedidas" onchange="handlerChangesSwitches(this)">
-                                            <label for="ArmarioPuertasCorredoraOption" class="custom-control-label">Armario puertas correderas</label>
-                                        </div>
-                                    </div>
+                                    <div class="form-group col-12" id="container-dormitorioPrincipal-ArmarioPuertasCorredora"></div>
                                     <!-- Armario puertas correderas medidas -->
-                                    <div class="form-group col-12 d-none" id="container-dormitorioPrincipal-ArmarioPuertasCorredoraMedidas">
-                                        <label for="dormitorioPrincipalArmarioPuertasCorredoraMedidas">Armario puertas correderas medidas</label>
-                                        <input type="text" class="form-control" name="dormitorioPrincipalArmarioPuertasCorredoraMedidas" id="dormitorioPrincipalArmarioPuertasCorredoraMedidas" aria-describedby="dormitorioPrincipalArmarioPuertasCorredoraMedidasHelper" placeholder="Medidas apróximadas">
-                                        <small id="dormitorioPrincipalArmarioPuertasCorredoraMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                    </div>
+                                    <div class="form-group col-12 d-none" id="container-dormitorioPrincipal-ArmarioPuertasCorredoraMedidas"></div>
                                     <!-- Zapatero -->
                                     <div class="form-group col-12" id="container-dormitorioPrincipal-Zapatero"></div>
                                     <!-- Maletas de viaje -->
@@ -395,56 +374,25 @@
                                 <!-- Comoda espejo -->
                                 <div class="form-group col-12" id="container-dormitorios-ComodaEspejo"></div>
                                 <!-- Armario puertas de abrir -->
-                                <div class="form-group col-12" id="container-dormitorios-ArmarioPuertasAbrirOption">
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="dormitoriosArmarioPuertasAbrirOption" data-target="container-dormitorios-ArmarioPuertasAbrirMedidas" onchange="handlerChangesSwitches(this)">
-                                        <label for="dormitoriosArmarioPuertasAbrirOption" class="custom-control-label">Armario puertas de abrir</label>
-                                    </div>
-                                </div>
+                                <div class="form-group col-12" id="container-dormitorios-ArmarioPuertasAbrir"></div>
                                 <!-- Armario puertas de abrir medidas -->
-                                <div class="form-group col-12 d-none" id="container-dormitorios-ArmarioPuertasAbrirMedidas">
-                                    <label for="ArmarioPuertasAbrirMedidas">Armario puertas de abrir medidas</label>
-                                    <input type="text" class="form-control" name="ArmarioPuertasAbrirMedidas" id="ArmarioPuertasAbrirMedidas" aria-describedby="ArmarioPuertasAbrirMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="ArmarioPuertasAbrirMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12 d-none" id="container-dormitorios-ArmarioPuertasAbrirMedidas"></div>
                                 <!-- Armario puertas correderas -->
-                                <div class="form-group col-12" id="container-dormitorios-ArmarioPuertasCorredoraOption">
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="dormitoriosArmarioPuertasCorredoraOption" data-target="container-dormitorios-ArmarioPuertasCorredoraMedidas" onchange="handlerChangesSwitches(this)">
-                                        <label for="dormitoriosArmarioPuertasCorredoraOption" class="custom-control-label">Armario puertas correderas</label>
-                                    </div>
-                                </div>
+                                <div class="form-group col-12" id="container-dormitorios-ArmarioPuertasCorredora"></div>
                                 <!-- Armario puertas correderas medidas -->
-                                <div class="form-group col-12 d-none" id="container-dormitorios-ArmarioPuertasCorredoraMedidas">
-                                    <label for="dormitoriosArmarioPuertasCorredoraMedidas">Armario puertas correderas medidas</label>
-                                    <input type="text" class="form-control" name="dormitoriosArmarioPuertasCorredoraMedidas" id="dormitoriosArmarioPuertasCorredoraMedidas" aria-describedby="dormitoriosArmarioPuertasCorredoraMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="dormitoriosArmarioPuertasCorredoraMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12 d-none" id="container-dormitorios-ArmarioPuertasCorredoraMedidas"></div>
                                 <!-- Mueble auxiliar -->
                                 <div class="form-group col-12" id="container-dormitorios-MuebleAuxiliar"></div>
                                 <!-- Armario esquinero -->
-                                <div class="form-group col-12" id="container-dormitorios-ArmarioEsquinero">
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="dormitoriosArmarioEsquinero" data-target="container-dormitorios-ArmarioEsquineroMedidas" onchange="handlerChangesSwitches(this)">
-                                        <label for="dormitoriosArmarioEsquinero" class="custom-control-label">Armario esquinero</label>
-                                    </div>
-                                </div>
+                                <div class="form-group col-12" id="container-dormitorios-ArmarioEsquinero"></div>
                                 <!-- Armario puertas corredoras medidas -->
-                                <div class="form-group col-12 d-none" id="container-dormitorios-ArmarioEsquineroMedidas">
-                                    <label for="dormitoriosArmarioEsquineroMedidas">Armario esquinero medidas</label>
-                                    <input type="text" class="form-control" name="dormitoriosArmarioEsquineroMedidas" id="dormitoriosArmarioEsquineroMedidas" aria-describedby="dormitoriosArmarioEsquineroMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="dormitoriosArmarioEsquineroMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12 d-none" id="container-dormitorios-ArmarioEsquineroMedidas"></div>
                                 <!-- Estanteria pared -->
                                 <div class="form-group col-12" id="container-dormitorios-EstanteriaPared"></div>
                                 <!-- Estanteria al suelo -->
                                 <div class="form-group col-12" id="container-dormitorios-EstanteriaSuelo"></div>
                                 <!-- Estanteria al suelo medidas -->
-                                <div class="form-group col-12">
-                                    <label for="dormitoriosEstanteriaSueloMedidas">Estanteria al suelo medidas</label>
-                                    <input type="text" class="form-control" name="dormitoriosEstanteriaSueloMedidas" id="dormitoriosEstanteriaSueloMedidas" aria-describedby="dormitoriosEstanteriaSueloMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="dormitoriosEstanteriaSueloMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12" id="container-dormitorios-EstanteriaSueloMedidas"></div>
                                 <!-- Escritorio ordenador -->
                                 <div class="form-group col-12" id="container-dormitorios-EscritorioOrdenador"></div>
                                 <!-- Silla escritorio -->
@@ -479,57 +427,21 @@
                                 <!-- Sillas -->
                                 <div class="form-group col-12" id="container-comedor-Sillas"></div>
                                 <!-- Modulo comedor a la pared  -->
-                                <div class="form-group col-12" id="container-comedor-ModuloComedorPared">
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="comedorModuloComedorPared" data-target="container-comedor-ModuloComedorParedMedidas" onchange="handlerChangesSwitches(this)">
-                                        <label for="comedorModuloComedorPared" class="custom-control-label">Modulo comedor a la pared </label>
-                                    </div>
-                                </div>
+                                <div class="form-group col-12" id="container-comedor-ModuloComedorPared"></div>
                                 <!-- Modulo comedor a la pared medidas -->
-                                <div class="form-group col-12 d-none" id="container-comedor-ModuloComedorParedMedidas">
-                                    <label for="comedorModuloComedorParedMedidas">Modulo comedor a la pared  medidas</label>
-                                    <input type="text" class="form-control" name="comedorModuloComedorParedMedidas" id="comedorModuloComedorParedMedidas" aria-describedby="comedorModuloComedorParedMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="comedorModuloComedorParedMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12 d-none" id="container-comedor-ModuloComedorParedMedidas"></div>
                                 <!-- Modulo comedor al suelo  -->
-                                <div class="form-group col-12" id="container-comedor-ModuloComedorSuelo">
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="comedorModuloComedorSuelo" data-target="container-comedor-ModuloComedorSueloMedidas" onchange="handlerChangesSwitches(this)">
-                                        <label for="comedorModuloComedorSuelo" class="custom-control-label">Modulo comedor al suelo </label>
-                                    </div>
-                                </div>
+                                <div class="form-group col-12" id="container-comedor-ModuloComedorSuelo"></div>
                                 <!-- Modulo comedor al suelo medidas -->
-                                <div class="form-group col-12 d-none" id="container-comedor-ModuloComedorSueloMedidas">
-                                    <label for="comedorModuloComedorSueloMedidas">Modulo comedor al suelo  medidas</label>
-                                    <input type="text" class="form-control" name="comedorModuloComedorSueloMedidas" id="comedorModuloComedorSueloMedidas" aria-describedby="comedorModuloComedorSueloMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="comedorModuloComedorSueloMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12 d-none" id="container-comedor-ModuloComedorSueloMedidas"></div>
                                 <!-- Vitrina  -->
-                                <div class="form-group col-12" id="container-comedor-Vitrina">
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="comedorVitrina" data-target="container-comedor-VitrinaMedidas" onchange="handlerChangesSwitches(this)">
-                                        <label for="comedorVitrina" class="custom-control-label">Vitrina</label>
-                                    </div>
-                                </div>
+                                <div class="form-group col-12" id="container-comedor-Vitrina"></div>
                                 <!-- Vitrina medidas -->
-                                <div class="form-group col-12 d-none" id="container-comedor-VitrinaMedidas">
-                                    <label for="comedorVitrinaMedidas">Vitrina medidas</label>
-                                    <input type="text" class="form-control" name="comedorVitrinaMedidas" id="comedorVitrinaMedidas" aria-describedby="comedorVitrinaMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="comedorVitrinaMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12 d-none" id="container-comedor-VitrinaMedidas"></div>
                                 <!-- Sofás 3 plazas  -->
-                                <div class="form-group col-12" id="container-comedor-MuebleTvBajo">
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="comedorMuebleTvBajo" data-target="container-comedor-MuebleTvBajoMedidas" onchange="handlerChangesSwitches(this)">
-                                        <label for="comedorMuebleTvBajo" class="custom-control-label">Mueble tv bajo</label>
-                                    </div>
-                                </div>
+                                <div class="form-group col-12" id="container-comedor-MuebleTvBajo"></div>
                                 <!-- Sofás 3 plazas medidas -->
-                                <div class="form-group col-12 d-none" id="container-comedor-MuebleTvBajoMedidas">
-                                    <label for="comedorMuebleTvBajoMedidas">Mueble tv bajo medias medidas</label>
-                                    <input type="text" class="form-control" name="comedorMuebleTvBajoMedidas" id="comedorMuebleTvBajoMedidas" aria-describedby="comedorMuebleTvBajoMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="comedorMuebleTvBajoMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12 d-none" id="container-comedor-MuebleTvBajoMedidas"></div>
                                 <!-- Mesa madera -->
                                 <div class="form-group col-12" id="container-comedor-MesaMadera"></div>
                                 <!-- Mesa cristal -->
@@ -543,33 +455,15 @@
                                 <!-- Sillas de comedor -->
                                 <div class="form-group col-12" id="container-comedor-SillasComedor"></div>
                                 <!-- Sofás 3 plazas  -->
-                                <div class="form-group col-12" id="container-comedor-Sofas3Plazas">
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="comedorSofas3Plazas" data-target="container-comedor-Sofas3PlazasMedidas" onchange="handlerChangesSwitches(this)">
-                                        <label for="comedorSofas3Plazas" class="custom-control-label">Sofás 3 plazas </label>
-                                    </div>
-                                </div>
+                                <div class="form-group col-12" id="container-comedor-Sofas3Plazas"></div>
                                 <!-- Sofás 3 plazas medidas -->
-                                <div class="form-group col-12 d-none" id="container-comedor-Sofas3PlazasMedidas">
-                                    <label for="comedorSofas3PlazasMedidas">Sofás 3 plazas  medidas</label>
-                                    <input type="text" class="form-control" name="comedorSofas3PlazasMedidas" id="comedorSofas3PlazasMedidas" aria-describedby="comedorSofas3PlazasMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="comedorSofas3PlazasMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12 d-none" id="container-comedor-Sofas3PlazasMedidas"></div>
                                 <!-- Sofás 2 plazas -->
                                 <div class="form-group col-12" id="container-comedor-Sofas2Plazas"></div>
                                 <!-- Sofá Chaise-longe  -->
-                                <div class="form-group col-12" id="container-comedor-SofaChaiseLonge">
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="comedorSofaChaiseLonge" data-target="container-comedor-SofaChaiseLongeMedidas" onchange="handlerChangesSwitches(this)">
-                                        <label for="comedorSofaChaiseLonge" class="custom-control-label">Sofá Chaise-longe </label>
-                                    </div>
-                                </div>
+                                <div class="form-group col-12" id="container-comedor-SofaChaiseLonge"></div>
                                 <!-- Sofá Chaise-longe medidas -->
-                                <div class="form-group col-12 d-none" id="container-comedor-SofaChaiseLongeMedidas">
-                                    <label for="comedorSofaChaiseLongeMedidas">Sofá Chaise-longe  medidas</label>
-                                    <input type="text" class="form-control" name="comedorSofaChaiseLongeMedidas" id="comedorSofaChaiseLongeMedidas" aria-describedby="comedorSofaChaiseLongeMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="comedorSofaChaiseLongeMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12 d-none" id="container-comedor-SofaChaiseLongeMedidas"></div>
                                 <!-- Sofás con motor -->
                                 <div class="form-group col-12" id="container-comedor-SofasMotor"></div>
                                 <!-- Sofás cama -->
@@ -580,25 +474,12 @@
                                 <div class="form-group col-12" id="container-comedor-EstanteriaPared"></div>
                                 <!-- Estantería al suelo -->
                                 <div class="form-group col-12" id="container-comedor-EstanteriaSuelo"></div>
-                                <!-- Estantería al suelo -->
-                                <div class="form-group col-12">
-                                    <label for="comedorEstanteriaSueloMedidas">Estantería al suelo medidas</label>
-                                    <input type="text" class="form-control" name="comedorEstanteriaSueloMedidas" id="comedorEstanteriaSueloMedidas" aria-describedby="comedorEstanteriaSueloMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="comedorEstanteriaSueloMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <!-- Estantería al suelo medidas-->
+                                <div class="form-group col-12" id="container-comedor-EstanteriaSueloMedidas"></div>
                                 <!-- Mueble auxiliar  -->
-                                <div class="form-group col-12" id="container-comedor-MuebleAuxiliar">
-                                    <div class="custom-control custom-switch">
-                                        <input type="checkbox" class="custom-control-input" id="comedorMuebleAuxiliar" data-target="container-comedor-MuebleAuxiliarMedidas" onchange="handlerChangesSwitches(this)">
-                                        <label for="comedorMuebleAuxiliar" class="custom-control-label">Mueble auxiliar</label>
-                                    </div>
-                                </div>
+                                <div class="form-group col-12" id="container-comedor-MuebleAuxiliar"></div>
                                 <!-- Mueble auxiliar  medidas -->
-                                <div class="form-group col-12 d-none" id="container-comedor-MuebleAuxiliarMedidas">
-                                    <label for="comedorMuebleAuxiliarMedidas">Mueble auxiliar medidas</label>
-                                    <input type="text" class="form-control" name="comedorMuebleAuxiliarMedidas" id="comedorMuebleAuxiliarMedidas" aria-describedby="comedorMuebleAuxiliarMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="comedorMuebleAuxiliarMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12 d-none" id="container-comedor-MuebleAuxiliarMedidas"></div>
                                 <!-- Perchero de pie -->
                                 <div class="form-group col-12" id="container-comedor-PercheroPie"></div>
                                 <!-- Lámpara de pie -->
@@ -696,19 +577,11 @@
                                 <!-- Librería modular -->
                                 <div class="form-group col-12" id="container-oficina-LibreriaModular"></div>
                                 <!-- Librería modular medidas -->
-                                <div class="form-group col-12" id="container-oficina-LibreriaModularMedidas">
-                                    <label for="oficinaLibreriaModularMedidas">Librería modular medidas</label>
-                                    <input type="text" class="form-control" name="oficinaLibreriaModularMedidas" id="oficinaLibreriaModularMedidas" aria-describedby="oficinaLibreriaModularMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="oficinaLibreriaModularMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12" id="container-oficina-LibreriaModularMedidas"></div>
                                 <!-- Estantería al suelo -->
                                 <div class="form-group col-12" id="container-oficina-EstanteriaSuelo"></div>
                                 <!-- Estantería al suelo medidas -->
-                                <div class="form-group col-12" id="container-oficina-EstanteriaSueloMedidas">
-                                    <label for="oficinaEstanteriaSueloMedidas">Estantería al suelo medidas</label>
-                                    <input type="text" class="form-control" name="oficinaEstanteriaSueloMedidas" id="oficinaEstanteriaSueloMedidas" aria-describedby="oficinaEstanteriaSueloMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="oficinaEstanteriaSueloMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12" id="container-oficina-EstanteriaSueloMedidas"></div>
                                 <!-- Estantería a la pared -->
                                 <div class="form-group col-12" id="container-oficina-EstanteriaPared"></div>
                                 <!-- Mueble auxiliar -->
@@ -716,21 +589,13 @@
                                 <!-- Mesa oficina -->
                                 <div class="form-group col-12" id="container-oficina-MesaOficina"></div>
                                 <!-- Mesa oficina medidas -->
-                                <div class="form-group col-12" id="container-oficina-MesaOficinaMedidas">
-                                    <label for="oficinaMesaOficinaMedidas">Mesa oficina medidas</label>
-                                    <input type="text" class="form-control" name="oficinaMesaOficinaMedidas" id="oficinaMesaOficinaMedidas" aria-describedby="oficinaMesaOficinaMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="oficinaMesaOficinaMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12" id="container-oficina-MesaOficinaMedidas"></div>
                                 <!-- Mesa con caballetes -->
                                 <div class="form-group col-12" id="container-oficina-MesaCaballetes"></div>
                                 <!-- Mesa de reuniones -->
                                 <div class="form-group col-12" id="container-oficina-MesaReuniones"></div>
                                 <!-- Mesa de reuniones medidas -->
-                                <div class="form-group col-12" id="container-oficina-MesaReunionesMedidas">
-                                    <label for="oficinaMesaReunionesMedidas">Mesa de reuniones medidas</label>
-                                    <input type="text" class="form-control" name="oficinaMesaReunionesMedidas" id="oficinaMesaReunionesMedidas" aria-describedby="oficinaMesaReunionesMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="oficinaMesaReunionesMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12" id="container-oficina-MesaReunionesMedidas"></div>
                                 <!-- Bucks cajonera oficina -->
                                 <div class="form-group col-12" id="container-oficina-BucksCajoneraOficina"></div>
                                 <!-- Silla de oficina -->
@@ -752,19 +617,11 @@
                                 <!-- Armario archivador -->
                                 <div class="form-group col-12" id="container-oficina-ArmarioArchivador"></div>
                                 <!-- Armario archivador medidas -->
-                                <div class="form-group col-12" id="container-oficina-ArmarioArchivadorMedidas">
-                                    <label for="oficinaArmarioArchivadorMedidas">Armario archivador medidas</label>
-                                    <input type="text" class="form-control" name="oficinaArmarioArchivadorMedidas" id="oficinaArmarioArchivadorMedidas" aria-describedby="oficinaArmarioArchivadorMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="oficinaArmarioArchivadorMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12" id="container-oficina-ArmarioArchivadorMedidas"></div>
                                 <!-- Armario métalico -->
                                 <div class="form-group col-12" id="container-oficina-ArmarioMetalico"></div>
                                 <!-- Armario métalico medidas -->
-                                <div class="form-group col-12" id="container-oficina-ArmarioMetalicoMedidas">
-                                    <label for="oficinaArmarioMetalicoMedidas">Armario métalico medidas</label>
-                                    <input type="text" class="form-control" name="oficinaArmarioMetalicoMedidas" id="oficinaArmarioMetalicoMedidas" aria-describedby="oficinaArmarioMetalicoMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="oficinaArmarioMetalicoMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12" id="container-oficina-ArmarioMetalicoMedidas"></div>
                                 <!-- Estantería Archivadores -->
                                 <div class="form-group col-12" id="container-oficina-EstanteriaArchivadores"></div>
                                 <!-- Lámpara de pie -->
@@ -815,11 +672,7 @@
                                 <!-- Mueble recibidor -->
                                 <div class="form-group col-12" id="container-recibidor-MuebleRecibidor"></div>
                                 <!-- Mueble recibidor medidas -->
-                                <div class="form-group col-12" id="container-recibidor-MuebleRecibidorMedidas">
-                                    <label for="recibidorMuebleRecibidorMedidas">Mueble recibidor medidas</label>
-                                    <input type="text" class="form-control" name="recibidorMuebleRecibidorMedidas" id="recibidorMuebleRecibidorMedidas" aria-describedby="recibidorMuebleRecibidorMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="recibidorMuebleRecibidorMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12" id="container-recibidor-MuebleRecibidorMedidas"></div>
                                 <!-- Espejo -->
                                 <div class="form-group col-12" id="container-recibidor-Espejo"></div>
                                 <!-- Perchero -->
@@ -857,11 +710,7 @@
                                 <!-- Estanterías al suelo -->
                                 <div class="form-group col-12" id="container-trastero-EstanteriasSuelo"></div>
                                 <!-- Estanterías al suelo medidas -->
-                                <div class="form-group col-12" id="container-trastero-EstanteriasSueloMedidas">
-                                    <label for="trasteroEstanteriasSueloMedidas">Estanterías al suelo medidas</label>
-                                    <input type="text" class="form-control" name="trasteroEstanteriasSueloMedidas" id="trasteroEstanteriasSueloMedidas" aria-describedby="trasteroEstanteriasSueloMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="trasteroEstanteriasSueloMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12" id="container-trastero-EstanteriasSueloMedidas"></div>
                                 <!-- Trastos -->
                                 <div class="form-group col-12" id="container-trastero-Trastos"></div>
                                 <!-- Botelleros -->
@@ -869,19 +718,11 @@
                                 <!-- Armarios puertas de abrir -->
                                 <div class="form-group col-12" id="container-trastero-ArmarioPuestasAbrir"></div>
                                 <!-- Armarios puertas de abrir medidas -->
-                                <div class="form-group col-12" id="container-trastero-ArmarioPuestasAbrirMedidas">
-                                    <label for="trasteroArmarioPuestasAbrirMedidas">Armarios puertas de abrir medidas</label>
-                                    <input type="text" class="form-control" name="trasteroArmarioPuestasAbrirMedidas" id="trasteroArmarioPuestasAbrirMedidas" aria-describedby="trasteroArmarioPuestasAbrirMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="trasteroArmarioPuestasAbrirMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12" id="container-trastero-ArmarioPuestasAbrirMedidas"></div>
                                 <!-- Armarios puertas corredoras -->
                                 <div class="form-group col-12" id="container-trastero-ArmarioPuestasCorredoras"></div>
                                 <!-- Armarios puertas corredoras medidas -->
-                                <div class="form-group col-12" id="container-trastero-ArmarioPuestasCorredorasMedidas">
-                                    <label for="trasteroArmarioPuestasCorredorasMedidas">Armarios puertas corredoras medidas</label>
-                                    <input type="text" class="form-control" name="trasteroArmarioPuestasCorredorasMedidas" id="trasteroArmarioPuestasCorredorasMedidas" aria-describedby="trasteroArmarioPuestasCorredorasMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="trasteroArmarioPuestasCorredorasMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12" id="container-trastero-ArmarioPuestasCorredorasMedidas"></div>
                                 <!-- Bicicleta elíptica -->
                                 <div class="form-group col-12" id="container-trastero-BicicletaEliptica"></div>
                                 <!-- Maletas de viaje 8 kilos -->
@@ -946,11 +787,7 @@
                                 <!-- Mueble auxiliar -->
                                 <div class="form-group col-12" id="container-terraza-MuebleAuxiliar"></div>
                                 <!-- Mueble auxiliar medidas -->
-                                <div class="form-group col-12" id="container-terraza-MuebleAuxiliarMedidas">
-                                    <label for="terrazaMuebleAuxiliarMedidas">Mueble auxiliar medidas</label>
-                                    <input type="text" class="form-control" name="terrazaMuebleAuxiliarMedidas" id="terrazaMuebleAuxiliarMedidas" aria-describedby="terrazaMuebleAuxiliarMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="terrazaMuebleAuxiliarMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small>
-                                </div>
+                                <div class="form-group col-12" id="container-terraza-MuebleAuxiliarMedidas"></div>
                                 <!-- Armario PVC -->
                                 <div class="form-group col-12" id="container-terraza-ArmarioPvc"></div>
                                 <!-- Casita de plástico niños -->
@@ -991,11 +828,7 @@
                                 <!-- Muebles baño de pie  -->
                                 <div class="form-group col-12" id="container-bano-MueblesBanoPie"></div>
                                 <!-- Muebles baño de pie medidas -->
-                                <div class="form-group col-12" id="container-bano-MueblesBanoPieMedidas">
-                                    <!-- <label for="banoMueblesBanoPieMedidas">Muebles baño de pie medidas</label>
-                                    <input type="text" class="form-control" name="banoMueblesBanoPieMedidas" id="banoMueblesBanoPieMedidas" aria-describedby="banoMueblesBanoPieMedidasHelper" placeholder="Medidas apróximadas">
-                                    <small id="banoMueblesBanoPieMedidasHelper" class="form-text text-muted">Descripcion helper or validation message.</small> -->
-                                </div>
+                                <div class="form-group col-12" id="container-bano-MueblesBanoPieMedidas"></div>
                                 <!-- Comentarios -->
                                 <p>Adjunte sus fotos por Whatsapp (+34 635222166) O por correo electrónico a mudanzas1euroxkm@gmail.com</p>
                                 <div class="form-group col-12">

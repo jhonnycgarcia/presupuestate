@@ -36,9 +36,14 @@ function calcAmount() {
         for (const item in sectionItems) { // Recorrer items de la seccion
             const { amount } = sectionItems[item];
             totalAmoun = totalAmoun + amount;
+
+            if (amount === 0) delete data[section][item]; // Limpiar arreglo de datos de items
         }
+
+        if (Object.keys(sectionData[section]).length === 0) delete data[section]; // Limpiar arreglo de secciones
     }
 
+    console.log(data);
     document.getElementById('amount').innerText = totalAmoun; // Actualizar valor total
 }
 
